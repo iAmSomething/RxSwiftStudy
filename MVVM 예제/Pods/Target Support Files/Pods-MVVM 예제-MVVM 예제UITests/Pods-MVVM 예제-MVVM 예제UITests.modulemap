@@ -1,6 +1,0 @@
-framework module Pods_MVVM______MVVM_____UITests {
-  umbrella header "Pods-MVVM 예제-MVVM 예제UITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

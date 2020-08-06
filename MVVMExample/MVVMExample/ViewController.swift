@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     self.loginBtn.rx.tap
       .bind(to: viewModel.logInBtnTouched)
       .disposed(by: disposeBag)
-    
     viewModel.result.emit(onNext: { (result) in
       switch result {
       case .success(let user) :

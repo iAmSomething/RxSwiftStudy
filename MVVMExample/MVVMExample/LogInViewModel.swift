@@ -11,10 +11,8 @@ import RxSwift
 import RxCocoa
 struct LogInViewModel {
   let idTfChanged = PublishRelay<String>()
-  let idTfLen = PublishRelay<Int>()
   let pwTfChanged = PublishRelay<String>()
   let logInBtnTouched = PublishRelay<Void>()
-  
   let result : Signal<Result<User,LoginErr>>
   init (model : LogInModel = LogInModel()) {
     result = logInBtnTouched

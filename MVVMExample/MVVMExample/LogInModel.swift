@@ -39,9 +39,9 @@ struct LogInModel {
       return Disposables.create()
     }
   }
-  func getIdLength(id : String) -> Observable<Int?> {
+  func getIdLength(id : String) -> Observable<String?> {
     return Observable.create { length in
-      length.onNext(id.count)
+      length.onNext(String(id.count))
       length.onCompleted()
       return Disposables.create()
     }

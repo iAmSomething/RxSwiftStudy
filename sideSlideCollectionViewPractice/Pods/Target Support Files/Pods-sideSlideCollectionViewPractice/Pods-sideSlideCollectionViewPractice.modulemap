@@ -1,0 +1,6 @@
+framework module Pods_sideSlideCollectionViewPractice {
+  umbrella header "Pods-sideSlideCollectionViewPractice-umbrella.h"
+
+  export *
+  module * { export * }
+}

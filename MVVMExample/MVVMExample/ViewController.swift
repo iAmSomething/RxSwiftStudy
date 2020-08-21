@@ -42,7 +42,13 @@ class ViewController: UIViewController {
         self.showErr()
       }
     })
-    .disposed(by: disposeBag)
+      .disposed(by: disposeBag)
+    self.idTf.rx.text.orEmpty
+      .subscribe{ text in
+        let temp = text.element!
+        self.idTfLen.text = "아이디 길이 : \(temp.count)"
+    }
+  .disposed(by: disposeBag)
   }
   func moveToMain() {
     print("로그인 성공")

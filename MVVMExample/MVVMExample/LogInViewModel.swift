@@ -13,6 +13,7 @@ struct LogInViewModel {
   let idTfChanged = PublishRelay<String>()
   let pwTfChanged = PublishRelay<String>()
   let logInBtnTouched = PublishRelay<Void>()
+  //var idLength : Observable<String>
   let result : Signal<Result<User,LoginErr>>
   init (model : LogInModel = LogInModel()) {
     result = logInBtnTouched
@@ -21,5 +22,10 @@ struct LogInViewModel {
       .asSignal(onErrorJustReturn: .failure(.defaultError))
   }
 }
+//  func getlength() -> Observable<String?>{
+//    let model : LogInModel = LogInModel()
+//    return model.getIdLength(id: idTfChanged.asObservable())
+//  }
+
 
 
